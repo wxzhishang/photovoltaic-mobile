@@ -1,0 +1,395 @@
+.home-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+// 轮播图样式
+.banner-section {
+  .banner-swiper {
+    height: 400rpx;
+  }
+
+  .banner-item {
+    position: relative;
+    height: 400rpx;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    color: #fff;
+    padding: 40rpx 30rpx 30rpx;
+  }
+
+  .banner-title {
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+}
+
+// 卡片通用样式
+.stats-card, .news-card, .expert-card, .welcome-card {
+  margin: 20px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-extra {
+  font-size: 26px;
+  color: #666;
+}
+
+// 统计数据样式
+.stats-section {
+  padding: 30rpx;
+
+  .stats-card {
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+    border: 1rpx solid #f0f0f0;
+
+    .card-header {
+      margin-bottom: 30rpx;
+    }
+
+    .card-title {
+      font-size: 32rpx;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30rpx;
+    }
+
+    .stats-item {
+      text-align: center;
+
+      .stats-value {
+        display: block;
+        font-size: 36rpx;
+        font-weight: bold;
+        color: #1976d2;
+        margin-bottom: 10rpx;
+      }
+
+      .stats-label {
+        font-size: 24rpx;
+        color: #666;
+      }
+    }
+  }
+}
+
+// 功能网格样式
+.grid-section {
+  padding: 30rpx;
+  background: #fff;
+  margin: 20rpx 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+  border: 1rpx solid #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40rpx 20rpx;
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20rpx 10rpx;
+    border-radius: 12rpx;
+    transition: all 0.3s ease;
+    
+    &:active {
+      transform: scale(0.95);
+      background: rgba(25, 118, 210, 0.05);
+    }
+
+    .grid-icon {
+      width: 80rpx;
+      height: 80rpx;
+      border-radius: 20rpx;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40rpx;
+      margin-bottom: 15rpx;
+      box-shadow: 0 4rpx 12rpx rgba(25, 118, 210, 0.2);
+    }
+
+    .grid-title {
+      font-size: 24rpx;
+      color: #333;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}
+
+// 章节标题通用样式
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  margin: 0 0 20rpx 0;
+
+  .section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    flex: 1;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: -15rpx;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6rpx;
+      height: 30rpx;
+      background: #1976d2;
+      border-radius: 3rpx;
+    }
+  }
+
+  .more-text {
+    font-size: 24rpx;
+    color: #1976d2;
+    flex: 1;
+    text-align: right;
+    transition: all 0.3s ease;
+    
+    &:active {
+      color: #0d47a1;
+      transform: scale(0.95);
+    }
+  }
+
+  .more-btn {
+    font-size: 20rpx;
+    color: #1976d2;
+    background: rgba(25, 118, 210, 0.1);
+    border: 1rpx solid #1976d2;
+    border-radius: 16rpx;
+    padding: 6rpx 16rpx;
+    line-height: 1;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    
+    &:active {
+      background: #1976d2;
+      color: #fff;
+      transform: scale(0.95);
+    }
+  }
+}
+
+// 新闻列表样式
+.news-section {
+  margin-bottom: 30rpx;
+
+  .news-list {
+    padding: 0 30rpx;
+  }
+
+  .news-item {
+    background: #fff;
+    border-radius: 16rpx;
+    margin-bottom: 20rpx;
+    padding: 30rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+    border: 1rpx solid #f0f0f0;
+    transition: all 0.3s ease;
+    
+    &:active {
+      transform: translateY(2rpx);
+      box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.12);
+      border-color: #1976d2;
+    }
+  }
+
+  .news-title {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10rpx;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .news-time {
+    font-size: 22rpx;
+    color: #999;
+  }
+}
+
+// 专家列表样式
+.expert-section {
+  margin-bottom: 30rpx;
+
+  .section-header {
+    .expert-hint {
+      .hint-text {
+        font-size: 22rpx;
+        color: #999;
+      }
+    }
+  }
+
+  .expert-scroll {
+    white-space: nowrap;
+    padding: 0 30rpx;
+  }
+
+  .expert-list-horizontal {
+    display: flex;
+    gap: 20rpx;
+  }
+
+  .expert-card-horizontal {
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+    border: 1rpx solid #f0f0f0;
+    width: 280rpx;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    
+    &:active {
+      transform: translateY(2rpx);
+      box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.12);
+      border-color: #1976d2;
+    }
+  }
+
+  .expert-avatar-horizontal {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+    margin: 0 auto 20rpx auto;
+    display: block;
+    border: 3rpx solid #f0f8ff;
+  }
+
+  .expert-info-horizontal {
+    text-align: center;
+  }
+
+  .expert-name-horizontal {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8rpx;
+    display: block;
+  }
+
+  .expert-title-horizontal {
+    font-size: 24rpx;
+    color: #666;
+    margin-bottom: 6rpx;
+    display: block;
+  }
+
+  .expert-company-horizontal {
+    font-size: 22rpx;
+    color: #999;
+    margin-bottom: 15rpx;
+    display: block;
+  }
+
+  .expert-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15rpx;
+    
+    .stat-item {
+      font-size: 20rpx;
+      color: #666;
+      background: #f8f9fa;
+      padding: 6rpx 12rpx;
+      border-radius: 12rpx;
+    }
+  }
+
+  .expert-tags-horizontal {
+    display: flex;
+    gap: 8rpx;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .expert-tag-horizontal {
+    background: rgba(25, 118, 210, 0.1);
+    color: #1976d2;
+    font-size: 18rpx;
+    padding: 6rpx 10rpx;
+    border-radius: 10rpx;
+    line-height: 1;
+    border: 1rpx solid rgba(25, 118, 210, 0.2);
+    text-align: center;
+  }
+}
+
+// 欢迎区域样式
+.welcome-section {
+  .welcome-content {
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .welcome-button {
+    background: #3cc51f;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 25px;
+    display: inline-block;
+  }
+
+  .button-text {
+    color: white;
+    font-size: 26px;
+  }
+}
+

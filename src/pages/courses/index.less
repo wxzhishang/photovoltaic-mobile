@@ -1,0 +1,239 @@
+.page { padding: 40px; text-align: center; }
+
+.courses-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+
+  .search-section {
+    background: #fff;
+    padding: 20rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+  }
+
+  .tabs-section {
+    background: #fff;
+    padding: 20rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+
+    .tab-buttons {
+      display: flex;
+      gap: 15rpx;
+    }
+
+    .tab-button {
+      flex: 1;
+      text-align: center;
+      padding: 15rpx 20rpx;
+      border-radius: 25rpx;
+      border: 1rpx solid #ddd;
+      background: #fff;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: #3cc51f;
+        border-color: #3cc51f;
+
+        .tab-text {
+          color: #fff;
+        }
+      }
+
+      .tab-text {
+        font-size: 24rpx;
+        color: #666;
+      }
+    }
+  }
+
+  .notice-banner {
+    background: #fff3cd;
+    border: 1rpx solid #ffeaa7;
+    margin: 20rpx 30rpx;
+    padding: 20rpx;
+    border-radius: 12rpx;
+    text-align: center;
+
+    .notice-text {
+      font-size: 24rpx;
+      color: #856404;
+    }
+  }
+
+  .courses-list {
+    height: calc(100vh - 300rpx);
+    padding: 0 30rpx;
+  }
+
+  .course-card {
+    background: #fff;
+    border-radius: 16rpx;
+    margin-bottom: 20rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+
+    .course-thumbnail {
+      width: 100%;
+      height: 200rpx;
+    }
+
+    .course-content {
+      padding: 30rpx;
+
+      .course-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20rpx;
+
+        .course-title {
+          font-size: 30rpx;
+          font-weight: bold;
+          color: #333;
+          line-height: 1.4;
+          flex: 1;
+          margin-right: 20rpx;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+
+        .course-status {
+          .status-text {
+            font-size: 22rpx;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .course-description {
+        font-size: 26rpx;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 20rpx;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: block;
+      }
+
+      .course-meta {
+        display: flex;
+        gap: 20rpx;
+        margin-bottom: 20rpx;
+        flex-wrap: wrap;
+
+        .instructor,
+        .duration,
+        .level {
+          font-size: 22rpx;
+          color: #666;
+          background: #f8f9fa;
+          padding: 6rpx 12rpx;
+          border-radius: 12rpx;
+        }
+
+        .instructor {
+          color: #3cc51f;
+          background: #f0f8f0;
+        }
+      }
+
+      .course-tags {
+        display: flex;
+        gap: 15rpx;
+        flex-wrap: wrap;
+        margin-bottom: 20rpx;
+
+        .tag {
+          background: #e3f2fd;
+          color: #1976d2;
+          font-size: 20rpx;
+          padding: 8rpx 16rpx;
+          border-radius: 16rpx;
+          line-height: 1;
+        }
+      }
+
+      .course-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .price-section {
+          display: flex;
+          align-items: baseline;
+          gap: 15rpx;
+
+          .current-price {
+            font-size: 32rpx;
+            font-weight: bold;
+            color: #ff6b35;
+          }
+
+          .original-price {
+            font-size: 24rpx;
+            color: #999;
+            text-decoration: line-through;
+          }
+        }
+
+        .stats-section {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 5rpx;
+
+          .student-count,
+          .rating {
+            font-size: 22rpx;
+            color: #666;
+          }
+
+          .rating {
+            color: #ffa726;
+          }
+        }
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
+      transition: transform 0.1s ease;
+    }
+  }
+
+  .load-more {
+    text-align: center;
+    padding: 40rpx;
+    color: #3cc51f;
+    font-size: 28rpx;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .no-more {
+    text-align: center;
+    padding: 40rpx;
+    
+    .no-more-text {
+      color: #999;
+      font-size: 26rpx;
+    }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 100rpx 40rpx;
+    
+    .empty-text {
+      color: #999;
+      font-size: 28rpx;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.trading-page {
+  background: #f5f5f5;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 140px;
+}
+
+.price-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 30px;
+  color: white;
+}
+
+.price-info {
+  text-align: center;
+
+  .price-label {
+    display: block;
+    font-size: 26px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+
+  .current-price {
+    display: block;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .price-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    &.up {
+      color: #52c41a;
+    }
+
+    &.down {
+      color: #ff4d4f;
+    }
+
+    &.stable {
+      color: #faad14;
+    }
+
+    .change-value {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .change-percent {
+      font-size: 24px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 12px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.tab-header {
+  display: flex;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+
+  &.active {
+    background: #3cc51f;
+    box-shadow: 0 2px 8px rgba(60, 197, 31, 0.3);
+  }
+
+  text {
+    font-size: 28px;
+    color: #666;
+  }
+
+  &.active text {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.trading-scroll {
+  height: calc(100vh - 320px);
+}
+
+.trading-list {
+  padding: 0 20px;
+}
+
+.trading-item {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .item-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+  }
+
+  .item-status {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.item-details {
+  margin-bottom: 20px;
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .detail-label {
+    font-size: 26px;
+    color: #666;
+  }
+
+  .detail-value {
+    font-size: 26px;
+    color: #333;
+    font-weight: 500;
+
+    &.price {
+      color: #3cc51f;
+      font-weight: bold;
+    }
+  }
+}
+
+.item-footer {
+  text-align: right;
+
+  .publish-time {
+    font-size: 22px;
+    color: #999;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 26px;
+}
+
+.publish-button {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background: #3cc51f;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(60, 197, 31, 0.4);
+
+  text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+} 

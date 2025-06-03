@@ -1,0 +1,235 @@
+.page { padding: 40px; text-align: center; }
+
+.jobs-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+
+  .search-section {
+    background: #fff;
+    padding: 20rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+  }
+
+  .tabs-section {
+    background: #fff;
+    padding: 20rpx 30rpx;
+    border-bottom: 1rpx solid #eee;
+    margin-bottom: 20rpx;
+
+    .tab-buttons {
+      display: flex;
+      gap: 20rpx;
+    }
+
+    .tab-button {
+      flex: 1;
+      text-align: center;
+      padding: 15rpx 20rpx;
+      border-radius: 25rpx;
+      border: 1rpx solid #ddd;
+      background: #fff;
+      transition: all 0.3s ease;
+
+      &.active {
+        background: #3cc51f;
+        border-color: #3cc51f;
+
+        .tab-text {
+          color: #fff;
+        }
+      }
+
+      .tab-text {
+        font-size: 26rpx;
+        color: #666;
+      }
+    }
+  }
+
+  .jobs-list {
+    height: calc(100vh - 220rpx);
+    padding: 0 30rpx;
+  }
+
+  .job-card {
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+    margin-bottom: 20rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+    position: relative;
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20rpx;
+
+      .company-info {
+        display: flex;
+        align-items: center;
+        gap: 20rpx;
+        flex: 1;
+
+        .company-logo {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 12rpx;
+          flex-shrink: 0;
+        }
+
+        .company-details {
+          flex: 1;
+
+          .company-name {
+            font-size: 26rpx;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8rpx;
+            display: block;
+          }
+
+          .job-location {
+            font-size: 22rpx;
+            color: #666;
+            display: block;
+          }
+        }
+      }
+
+      .job-status {
+        .status-tag {
+          padding: 8rpx 16rpx;
+          border-radius: 12rpx;
+          font-size: 20rpx;
+
+          &.published {
+            background: #e8f5e8;
+            color: #3cc51f;
+          }
+
+          &.pending {
+            background: #f5f5f5;
+            color: #999;
+          }
+
+          .status-text {
+            font-size: 20rpx;
+          }
+        }
+      }
+    }
+
+    .job-content {
+      margin-bottom: 20rpx;
+
+      .job-title {
+        font-size: 32rpx;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20rpx;
+        line-height: 1.4;
+        display: block;
+      }
+
+      .job-meta {
+        display: flex;
+        gap: 20rpx;
+        margin-bottom: 15rpx;
+        flex-wrap: wrap;
+
+        .job-salary {
+          color: #ff6b35;
+          font-size: 28rpx;
+          font-weight: bold;
+        }
+
+        .job-experience,
+        .job-education {
+          color: #666;
+          font-size: 24rpx;
+          background: #f8f9fa;
+          padding: 6rpx 12rpx;
+          border-radius: 12rpx;
+        }
+      }
+
+      .job-department {
+        font-size: 24rpx;
+        color: #666;
+        margin-bottom: 15rpx;
+        display: block;
+      }
+
+      .job-description {
+        font-size: 26rpx;
+        color: #666;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: block;
+      }
+    }
+
+    .job-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .job-type-tag {
+        background: #f0f8f0;
+        color: #3cc51f;
+        padding: 8rpx 16rpx;
+        border-radius: 16rpx;
+
+        .type-text {
+          font-size: 22rpx;
+        }
+      }
+
+      .publish-time {
+        font-size: 22rpx;
+        color: #999;
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
+      transition: transform 0.1s ease;
+    }
+  }
+
+  .load-more {
+    text-align: center;
+    padding: 40rpx;
+    color: #3cc51f;
+    font-size: 28rpx;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .no-more {
+    text-align: center;
+    padding: 40rpx;
+    
+    .no-more-text {
+      color: #999;
+      font-size: 26rpx;
+    }
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 100rpx 40rpx;
+    
+    .empty-text {
+      color: #999;
+      font-size: 28rpx;
+    }
+  }
+}

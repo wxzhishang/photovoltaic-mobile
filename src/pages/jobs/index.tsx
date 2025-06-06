@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { View, Text, Image, ScrollView } from '@tarojs/components'
-import { AtSearchBar } from 'taro-ui'
+import { Search } from '@taroify/core'
+import '@taroify/core/search/style'
 import Taro from '@tarojs/taro'
 import './index.less'
 
@@ -197,8 +198,8 @@ const Jobs = () => {
     filterJobs()
   }, [searchKeyword, activeTab, jobsList])
 
-  const handleSearch = (value: string) => {
-    setSearchKeyword(value)
+  const handleSearch = (event: any) => {
+    setSearchKeyword(event.detail.value)
   }
 
   const handleTabClick = (index: number) => {
@@ -233,11 +234,10 @@ const Jobs = () => {
     <View className='jobs-page'>
       {/* 搜索栏 */}
       <View className='search-section'>
-        <AtSearchBar
+        <Search
           value={searchKeyword}
           onChange={handleSearch}
           placeholder='搜索岗位或公司'
-          showActionButton={false}
         />
       </View>
 

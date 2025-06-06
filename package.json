@@ -37,12 +37,14 @@
     "production": [
       "last 3 versions",
       "Android >= 4.1",
-      "ios >= 8"
+      "ios >= 8",
+      "defaults and fully supports es6-module"
     ]
   },
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.24.4",
+    "@taroify/core": "^0.8.1",
     "@tarojs/components": "^4.1.1",
     "@tarojs/helper": "4.1.1",
     "@tarojs/plugin-framework-react": "4.1.1",
@@ -63,15 +65,15 @@
     "echarts": "^5.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "taro-ui": "^3.1.0-beta.2",
     "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
-    "@babel/plugin-transform-class-properties": "7.25.9",
-    "@babel/preset-react": "^7.24.1",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/preset-react": "^7.27.1",
     "@tarojs/cli": "4.1.1",
     "@tarojs/vite-runner": "4.1.1",
+    "@tarojs/webpack5-runner": "^4.1.1",
     "@types/react": "^18.0.0",
     "@vitejs/plugin-react": "^4.3.0",
     "babel-preset-taro": "4.1.1",

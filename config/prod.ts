@@ -1,7 +1,17 @@
 import type { UserConfigExport } from "@tarojs/cli"
 
 export default {
-  mini: {},
+  mini: {
+    postcss: {
+      autoprefixer: {
+        enable: true
+      },
+      pxtransform: {
+        enable: true,
+        config: {}
+      }
+    }
+  },
   h5: {
     // 确保产物为 es5
     legacy: true,

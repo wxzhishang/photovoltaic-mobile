@@ -4,8 +4,8 @@ import devConfig from './dev'
 import prodConfig from './prod'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig<'vite'>(async (merge, { command, mode }) => {
-  const baseConfig: UserConfigExport<'vite'> = {
+export default defineConfig<'webpack5'>(async (merge) => {
+  const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'photovoltaic-mobile',
     date: '2025-6-3',
     designWidth: 750,
@@ -27,7 +27,7 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
       }
     },
     framework: 'react',
-    compiler: 'vite',
+    compiler: 'webpack5',
     mini: {
       postcss: {
         pxtransform: {
@@ -35,6 +35,10 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
           config: {
 
           }
+        },
+        autoprefixer: {
+          enable: true,
+          config: {}
         },
         cssModules: {
           enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -44,6 +48,11 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
           }
         }
       },
+      miniCssExtractPluginOption: {
+        ignoreOrder: true,
+        chunkFilename: '[name].wxss',
+        filename: '[name].wxss'
+      }
     },
     h5: {
       publicPath: '/',

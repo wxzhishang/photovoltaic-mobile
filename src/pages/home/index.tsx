@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { View, Text, Image, Swiper, SwiperItem, Button, ScrollView } from '@tarojs/components'
-import { AtGrid } from 'taro-ui'
 import Taro from '@tarojs/taro'
 import { newsApi, expertApi } from '../../api'
 import { useUserStore } from '../../store/user'

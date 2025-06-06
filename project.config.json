@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "photovoltaic-mobile",
   "description": "光伏产业云平台移动端",
-  "appid": "touristappid",
+  "appid": "wxc753d442d8b80a4a",
   "setting": {
     "urlCheck": true,
     "es6": false,

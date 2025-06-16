@@ -4,6 +4,11 @@ import { Search } from '@taroify/core'
 import '@taroify/core/search/style'
 import Taro from '@tarojs/taro'
 import './index.less'
+import Course1 from '../../assets/images/course1.jpg'
+import Course2 from '../../assets/images/course2.jpg'
+import Course3 from '../../assets/images/course3.jpg'
+import Course4 from '../../assets/images/course4.jpg'
+import Course5 from '../../assets/images/course5.jpg'
 
 interface CourseItem {
   id: string
@@ -49,7 +54,7 @@ const Courses = () => {
           id: '1',
           title: '光伏系统设计与安装基础',
           description: '从零开始学习光伏系统的设计原理、组件选择、安装规范等核心知识',
-          thumbnail: '/assets/images/course1.jpg',
+          thumbnail: Course1,
           instructor: '张教授',
           duration: '24课时',
           level: '初级',
@@ -65,7 +70,7 @@ const Courses = () => {
           id: '2',
           title: '分布式光伏项目开发实务',
           description: '深入讲解分布式光伏项目的开发流程、政策解读、商业模式等实用内容',
-          thumbnail: '/assets/images/course2.jpg',
+          thumbnail: Course2,
           instructor: '李工程师',
           duration: '18课时',
           level: '中级',
@@ -81,7 +86,7 @@ const Courses = () => {
           id: '3',
           title: '光伏电站运维管理',
           description: '全面掌握光伏电站的运维管理知识，包括故障诊断、维护保养、数据分析等',
-          thumbnail: '/assets/images/course3.jpg',
+          thumbnail: Course3,
           instructor: '王主任',
           duration: '20课时',
           level: '中级',
@@ -96,7 +101,7 @@ const Courses = () => {
           id: '4',
           title: '新能源政策解读与投资分析',
           description: '解读最新新能源政策，分析投资机会，为投资决策提供专业指导',
-          thumbnail: '/assets/images/course4.jpg',
+          thumbnail: Course4,
           instructor: '陈博士',
           duration: '16课时',
           level: '高级',
@@ -112,7 +117,7 @@ const Courses = () => {
           id: '5',
           title: '光伏组件技术与质量检测',
           description: '深入了解光伏组件的技术原理、性能参数、质量检测方法等专业知识',
-          thumbnail: '/assets/images/course5.jpg',
+          thumbnail: Course5,
           instructor: '刘专家',
           duration: '22课时',
           level: '高级',

@@ -1,9 +1,19 @@
 import { useEffect, useState } from 'react'
 import { View, Text, Image, Swiper, SwiperItem, Button, ScrollView } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { newsApi, expertApi } from '../../api'
+// import { newsApi, expertApi } from '../../api'
 import { useUserStore } from '../../store/user'
 import './index.less'
+import Banner1 from '../../assets/images/banner1.jpg'
+import Banner2 from '../../assets/images/banner2.jpg'
+import Banner3 from '../../assets/images/banner3.jpg'
+import Avatar1 from '../../assets/images/avatar1.jpg'
+import Avatar2 from '../../assets/images/avatar2.jpg'
+import Avatar3 from '../../assets/images/avatar3.jpg'
+import Avatar4 from '../../assets/images/avatar4.jpg'
+import Avatar5 from '../../assets/images/avatar5.jpg'
+import Avatar6 from '../../assets/images/avatar6.jpg'
+
 
 interface NewsItem {
   id: string
@@ -37,9 +47,9 @@ interface StatsData {
 
 const Home = () => {
   const [bannerList] = useState([
-    { id: 1, image: '/assets/images/banner1.jpg', title: '光伏产业发展新机遇' },
-    { id: 2, image: '/assets/images/banner2.jpg', title: '绿色能源交易平台' },
-    { id: 3, image: '/assets/images/banner3.jpg', title: '专业人才培养计划' }
+    { id: 1, image: Banner1, title: '光伏产业发展新机遇' },
+    { id: 2, image: Banner2, title: '绿色能源交易平台' },
+    { id: 3, image: Banner3, title: '专业人才培养计划' }
   ])
   
   const [statsData] = useState<StatsData>({
@@ -207,7 +217,7 @@ const Home = () => {
           id: '1',
           name: '张明华',
           title: '光伏技术专家',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iIzMzY2M1MWYiLz48dGV4dCB4PSI0MCIgeT0iNDUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+5byg8J+RqDwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar1,
           company: '清华大学',
           expertise: ['太阳能电池技术', '光伏材料研究'],
           experience: '20年',
@@ -217,7 +227,7 @@ const Home = () => {
           id: '2',
           name: '李建国',
           title: '光伏项目总监',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iIzE5NzZkMiIvPjx0ZXh0IHg9IjQwIiB5PSI0NSIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7mnY7wn5i24oCN8J+SrzwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar2,
           company: '阳光电源',
           expertise: ['大型光伏电站建设', '项目管理'],
           experience: '15年',
@@ -227,7 +237,7 @@ const Home = () => {
           id: '3',
           name: '王晓敏',
           title: '储能技术专家',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iI2ZmOTgwMCIvPjx0ZXh0IHg9IjQwIiB5PSI0NSIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7njoswn5GW4oCN8J+SrzwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar3,
           company: '宁德时代',
           expertise: ['储能系统设计', '电池技术'],
           experience: '12年',
@@ -237,7 +247,7 @@ const Home = () => {
           id: '4',
           name: '陈志强',
           title: '光伏投资顾问',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iIzljMjdiMCIvPjx0ZXh0IHg9IjQwIiB5PSI0NSIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7pmYfwn5GoPjwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar4,
           company: '正泰新能源',
           expertise: ['投资分析', '市场研究'],
           experience: '18年',
@@ -247,7 +257,7 @@ const Home = () => {
           id: '5',
           name: '刘海波',
           title: '光伏制造专家',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iIzRjYWY1MCIvPjx0ZXh0IHg9IjQwIiB5PSI0NSIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7liJvwn5GIPjwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar5,
           company: '隆基绿能',
           expertise: ['制造工艺', '质量管理'],
           experience: '16年',
@@ -257,7 +267,7 @@ const Home = () => {
           id: '6',
           name: '赵文静',
           title: '政策研究专家',
-          avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iI2Y0NDMzNiIvPjx0ZXh0IHg9IjQwIiB5PSI0NSIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7otoXwn5GW4oCN8J+SrzwvdGV4dD48L3N2Zz4=',
+          avatar: Avatar6,
           company: '国家发改委',
           expertise: ['政策分析', '法规解读'],
           experience: '14年',

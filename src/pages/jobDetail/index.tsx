@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { View, Text, Image, ScrollView, Button } from '@tarojs/components'
 import Taro, { useRouter } from '@tarojs/taro'
 import './index.less'
+import CompanyImg from '../../assets/images/companyImg.jpg'
 
 interface JobDetail {
   key: string
@@ -46,7 +47,7 @@ const JobDetail = () => {
         type: 0,
         companyId: "c001",
         companyName: "阳光电力科技有限公司",
-        companyLogo: "/assets/images/company-logo1.jpg",
+        companyLogo: CompanyImg,
         salary: "15K-25K",
         experience: "3-5年",
         education: "本科",

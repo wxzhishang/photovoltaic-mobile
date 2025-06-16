@@ -31,32 +31,32 @@ export default defineAppConfig({
     list: [
       {
         pagePath: 'pages/home/index',
-        iconPath: 'assets/images/tab-home.png',
-        selectedIconPath: 'assets/images/tab-home-active.png',
+        iconPath: 'assets/images/icon1.jpg',
+        selectedIconPath: 'assets/images/icon1_active.jpg',
         text: '首页'
       },
       {
         pagePath: 'pages/jobs/index',
-        iconPath: 'assets/images/tab-jobs.png',
-        selectedIconPath: 'assets/images/tab-jobs-active.png',
+        iconPath: 'assets/images/icon2.jpg',
+        selectedIconPath: 'assets/images/icon2_active.jpg',
         text: '岗位信息'
       },
       {
         pagePath: 'pages/courses/index',
-        iconPath: 'assets/images/tab-courses.png',
-        selectedIconPath: 'assets/images/tab-courses-active.png',
+        iconPath: 'assets/images/icon3.jpg',
+        selectedIconPath: 'assets/images/icon3_active.jpg',
         text: '课程中心'
       },
       {
         pagePath: 'pages/greenElectricity/index',
-        iconPath: 'assets/images/tab-green.png',
-        selectedIconPath: 'assets/images/tab-green-active.png',
+        iconPath: 'assets/images/icon4.jpg',
+        selectedIconPath: 'assets/images/icon4_active.jpg',
         text: '绿电绿证'
       },
       {
         pagePath: 'pages/personal/index',
-        iconPath: 'assets/images/tab-personal.png',
-        selectedIconPath: 'assets/images/tab-personal-active.png',
+        iconPath: 'assets/images/icon5.jpg',
+        selectedIconPath: 'assets/images/icon5_active.jpg',
         text: '我的'
       }
     ]

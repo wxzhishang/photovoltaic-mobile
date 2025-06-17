@@ -4,6 +4,12 @@ import { Search } from '@taroify/core'
 import '@taroify/core/search/style'
 import Taro from '@tarojs/taro'
 import './index.less'
+import Logo1 from '../../assets/images/logo1.jpg'
+import Logo2 from '../../assets/images/logo2.jpg'
+import Logo3 from '../../assets/images/logo3.jpg'
+import Logo4 from '../../assets/images/logo4.jpg'
+import Logo5 from '../../assets/images/logo5.jpg'
+import Logo6 from '../../assets/images/logo6.jpg'
 
 interface JobItem {
   key: string
@@ -62,7 +68,7 @@ const Jobs = () => {
           type: 0,
           companyId: "c001",
           companyName: "阳光电力科技有限公司",
-          companyLogo: "/assets/images/company-logo1.jpg",
+          companyLogo: Logo1,
           salary: "15K-25K",
           experience: "3-5年",
           education: "本科",
@@ -78,7 +84,7 @@ const Jobs = () => {
           type: 1,
           companyId: "c002",
           companyName: "绿能科技集团",
-          companyLogo: "/assets/images/company-logo2.jpg",
+          companyLogo: Logo2,
           salary: "20K-30K",
           experience: "3-5年",
           education: "本科",
@@ -94,7 +100,7 @@ const Jobs = () => {
           type: 1,
           companyId: "c003",
           companyName: "太阳能源科技有限公司",
-          companyLogo: "/assets/images/company-logo3.jpg",
+          companyLogo: Logo3,
           salary: "12K-18K",
           experience: "2-4年",
           education: "本科",
@@ -110,7 +116,7 @@ const Jobs = () => {
           type: 0,
           companyId: "c006",
           companyName: "新能源科技有限公司",
-          companyLogo: "/assets/images/company-logo4.jpg",
+          companyLogo: Logo4,
           salary: "18K-30K",
           experience: "3-5年",
           education: "本科",
@@ -126,7 +132,7 @@ const Jobs = () => {
           type: 0,
           companyId: "c005",
           companyName: "环球光伏科技股份有限公司",
-          companyLogo: "/assets/images/company-logo5.jpg",
+          companyLogo: Logo5,
           salary: "20K-30K",
           experience: "3-5年",
           education: "本科及以上",
@@ -142,7 +148,7 @@ const Jobs = () => {
           type: 2,
           companyId: "c004",
           companyName: "光能智慧能源有限公司",
-          companyLogo: "/assets/images/company-logo6.jpg",
+          companyLogo: Logo6,
           salary: "15K-25K",
           experience: "3-5年",
           education: "本科",

@@ -47,7 +47,7 @@ const JobDetail = () => {
         type: 0,
         companyId: "c001",
         companyName: "阳光电力科技有限公司",
-        companyLogo: CompanyImg,
+        companyLogo: 'https://www.logo123.com/logos/201205/201205301648451909.jpg',
         salary: "15K-25K",
         experience: "3-5年",
         education: "本科",

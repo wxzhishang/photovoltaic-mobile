@@ -4,15 +4,9 @@ import Taro from '@tarojs/taro'
 // import { newsApi, expertApi } from '../../api'
 import { useUserStore } from '../../store/user'
 import './index.less'
-import Banner1 from '../../assets/images/banner1.jpg'
-import Banner2 from '../../assets/images/banner2.jpg'
-import Banner3 from '../../assets/images/banner3.jpg'
 import Avatar1 from '../../assets/images/avatar1.jpg'
 import Avatar2 from '../../assets/images/avatar2.jpg'
-import Avatar3 from '../../assets/images/avatar3.jpg'
-import Avatar4 from '../../assets/images/avatar4.jpg'
-import Avatar5 from '../../assets/images/avatar5.jpg'
-import Avatar6 from '../../assets/images/avatar6.jpg'
+
 
 
 interface NewsItem {
@@ -47,9 +41,9 @@ interface StatsData {
 
 const Home = () => {
   const [bannerList] = useState([
-    { id: 1, image: Banner1, title: '光伏产业发展新机遇' },
-    { id: 2, image: Banner2, title: '绿色能源交易平台' },
-    { id: 3, image: Banner3, title: '专业人才培养计划' }
+    { id: 1, image: 'https://www.zjrongxiang.com/upfile/attached/202109/c14c94444bb04f25008209f9665b16c9.jpg', title: '光伏产业发展新机遇' },
+    { id: 2, image: 'https://ts1.tc.mm.bing.net/th/id/R-C.7ebf8e6ea93ad6fc98d0b46f3eca2a4b?rik=pZFwTtmXHFFL8A&riu=http%3a%2f%2fwww.chinaden.cn%2fmeng_k%2fproducts_pic%2fimage%2f20210908154884298429.png&ehk=Kwzv7txuctUJ28aU%2ftiSqoy%2fSw%2belBLCJ9NR6mDeVxY%3d&risl=&pid=ImgRaw&r=0', title: '绿色能源交易平台' },
+    { id: 3, image: 'https://pic1.zhimg.com/v2-59692850aecd5c691ce31340c7fee13c_720w.jpg?source=172ae18b', title: '专业人才培养计划' }
   ])
   
   const [statsData] = useState<StatsData>({
@@ -237,7 +231,7 @@ const Home = () => {
           id: '3',
           name: '王晓敏',
           title: '储能技术专家',
-          avatar: Avatar3,
+          avatar: 'https://cl.tyut.edu.cn/__local/C/A6/4E/79980161DCF16ADE233C975D5BF_F7083067_13B69.png',
           company: '宁德时代',
           expertise: ['储能系统设计', '电池技术'],
           experience: '12年',
@@ -247,7 +241,7 @@ const Home = () => {
           id: '4',
           name: '陈志强',
           title: '光伏投资顾问',
-          avatar: Avatar4,
+          avatar: 'https://history.nankai.edu.cn/_upload/article/images/40/69/2287598b4493b6794b7152e27388/ce001c6a-7623-4377-bd9d-f09e1ff52300.jpg',
           company: '正泰新能源',
           expertise: ['投资分析', '市场研究'],
           experience: '18年',
@@ -257,7 +251,7 @@ const Home = () => {
           id: '5',
           name: '刘海波',
           title: '光伏制造专家',
-          avatar: Avatar5,
+          avatar: 'https://faculty.ecnu.edu.cn/_upload/article/images/f9/0d/a490bfaa4200917bb035528c01ef/20030007_s.jpg',
           company: '隆基绿能',
           expertise: ['制造工艺', '质量管理'],
           experience: '16年',
@@ -267,7 +261,7 @@ const Home = () => {
           id: '6',
           name: '赵文静',
           title: '政策研究专家',
-          avatar: Avatar6,
+          avatar: 'https://www.sustech.edu.cn/uploads/medium/2024/06/13160634_59621.jpg',
           company: '国家发改委',
           expertise: ['政策分析', '法规解读'],
           experience: '14年',

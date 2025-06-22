@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { View, Text, ScrollView } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { tradingApi, greenElectricityApi } from '../../api'
+// import { tradingApi, greenElectricityApi } from '../../api'
 import './index.less'
 
 interface TradingItem {
@@ -22,14 +22,124 @@ interface PriceData {
   trend: 'up' | 'down' | 'stable'
 }
 
+// Mock数据
+const mockTradingData = {
+  buy: [
+    {
+      id: '1',
+      title: '太阳能发电收购',
+      price: '0.42',
+      volume: '1500',
+      location: '北京市',
+      type: 'buy',
+      status: 'active',
+      publishTime: '2024-01-15 10:30'
+    },
+    {
+      id: '2',
+      title: '风力发电求购',
+      price: '0.45',
+      volume: '2000',
+      location: '上海市',
+      type: 'buy',
+      status: 'active',
+      publishTime: '2024-01-15 09:45'
+    },
+    {
+      id: '3',
+      title: '绿电批量收购',
+      price: '0.40',
+      volume: '5000',
+      location: '广东省',
+      type: 'buy',
+      status: 'completed',
+      publishTime: '2024-01-14 16:20'
+    },
+    {
+      id: '4',
+      title: '企业绿电采购',
+      price: '0.43',
+      volume: '3000',
+      location: '江苏省',
+      type: 'buy',
+      status: 'active',
+      publishTime: '2024-01-14 14:15'
+    },
+    {
+      id: '5',
+      title: '清洁能源收购',
+      price: '0.44',
+      volume: '1200',
+      location: '浙江省',
+      type: 'buy',
+      status: 'cancelled',
+      publishTime: '2024-01-14 11:30'
+    }
+  ],
+  sell: [
+    {
+      id: '6',
+      title: '光伏电站余电出售',
+      price: '0.48',
+      volume: '1800',
+      location: '山东省',
+      type: 'sell',
+      status: 'active',
+      publishTime: '2024-01-15 11:00'
+    },
+    {
+      id: '7',
+      title: '风电场绿电销售',
+      price: '0.46',
+      volume: '2500',
+      location: '内蒙古',
+      type: 'sell',
+      status: 'active',
+      publishTime: '2024-01-15 08:30'
+    },
+    {
+      id: '8',
+      title: '水电站清洁电力',
+      price: '0.41',
+      volume: '4000',
+      location: '四川省',
+      type: 'sell',
+      status: 'completed',
+      publishTime: '2024-01-14 17:45'
+    },
+    {
+      id: '9',
+      title: '分布式光伏发电',
+      price: '0.47',
+      volume: '800',
+      location: '河南省',
+      type: 'sell',
+      status: 'active',
+      publishTime: '2024-01-14 13:20'
+    },
+    {
+      id: '10',
+      title: '工业园区绿电',
+      price: '0.44',
+      volume: '2200',
+      location: '江西省',
+      type: 'sell',
+      status: 'active',
+      publishTime: '2024-01-14 10:15'
+    }
+  ]
+}
+
+const mockPriceData: PriceData = {
+  currentPrice: '0.45',
+  change: '+0.02',
+  changePercent: '+4.65%',
+  trend: 'up'
+}
+
 const Trading = () => {
   const [tradingList, setTradingList] = useState<TradingItem[]>([])
-  const [priceData, setPriceData] = useState<PriceData>({
-    currentPrice: '0.45',
-    change: '+0.02',
-    changePercent: '+4.65%',
-    trend: 'up'
-  })
+  const [priceData, setPriceData] = useState<PriceData>(mockPriceData)
   const [loading, setLoading] = useState(false)
   const [activeTab, setActiveTab] = useState('buy')
 
@@ -41,14 +151,12 @@ const Trading = () => {
   const fetchTradingData = async () => {
     setLoading(true)
     try {
-      const res = await tradingApi.getTradingList({ 
-        page: 1, 
-        size: 20, 
-        type: activeTab 
-      })
-      if (res.code === 200) {
-        setTradingList(res.data.list || [])
-      }
+      // 模拟API请求延迟
+      await new Promise(resolve => setTimeout(resolve, 500))
+      
+      // 使用mock数据
+      const mockData = mockTradingData[activeTab as keyof typeof mockTradingData] || []
+      setTradingList(mockData)
     } catch (error) {
       console.error('Failed to fetch trading data:', error)
     } finally {
@@ -58,10 +166,11 @@ const Trading = () => {
 
   const fetchPriceData = async () => {
     try {
-      const res = await greenElectricityApi.getRealTimePrice()
-      if (res.code === 200) {
-        setPriceData(res.data)
-      }
+      // 模拟API请求延迟
+      await new Promise(resolve => setTimeout(resolve, 200))
+      
+      // 使用mock数据
+      setPriceData(mockPriceData)
     } catch (error) {
       console.error('Failed to fetch price data:', error)
     }
@@ -174,9 +283,9 @@ const Trading = () => {
       </ScrollView>
 
       {/* 发布按钮 */}
-      <View className='publish-button'>
+      {/* <View className='publish-button'>
         <Text>发布交易</Text>
-      </View>
+      </View> */}
     </View>
   )
 }

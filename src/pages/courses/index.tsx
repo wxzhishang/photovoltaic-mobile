@@ -4,11 +4,6 @@ import { Search } from '@taroify/core'
 import '@taroify/core/search/style'
 import Taro from '@tarojs/taro'
 import './index.less'
-import Course1 from '../../assets/images/course1.jpg'
-import Course2 from '../../assets/images/course2.jpg'
-import Course3 from '../../assets/images/course3.jpg'
-import Course4 from '../../assets/images/course4.jpg'
-import Course5 from '../../assets/images/course5.jpg'
 
 interface CourseItem {
   id: string

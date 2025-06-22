@@ -4,6 +4,8 @@
   min-height: 100vh;
   background: #f5f5f5;
   padding-bottom: 120rpx;
+  width: 100%;
+  overflow-x: hidden;
 
   .page-banner {
     background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
@@ -28,14 +30,18 @@
   .tabs-container {
     background: #fff;
     border-bottom: 1rpx solid #eee;
+    width: 100%;
+    overflow-x: hidden;
 
     .tabs-scroll {
       white-space: nowrap;
+      width: 100%;
     }
 
     .tab-list {
       display: flex;
       padding: 0 20rpx;
+      min-width: 100%;
     }
 
     .tab-item {
@@ -73,6 +79,9 @@
   .content-container {
     height: calc(100vh - 240rpx);
     padding: 30rpx;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .section-title {
@@ -85,11 +94,16 @@
 
   /* 统计页面样式 */
   .statistics-content {
+    width: 100%;
+    box-sizing: border-box;
+
     .stats-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20rpx;
       margin-bottom: 40rpx;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .stat-card {
@@ -124,6 +138,8 @@
       border-radius: 16rpx;
       padding: 30rpx;
       box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+      width: 100%;
+      box-sizing: border-box;
 
       .info-title {
         font-size: 28rpx;
@@ -159,11 +175,16 @@
 
   /* 地区分布样式 */
   .map-content {
+    width: 100%;
+    box-sizing: border-box;
+
     .region-list {
       background: #fff;
       border-radius: 16rpx;
       padding: 30rpx;
       box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .region-item {
@@ -218,13 +239,21 @@
 
   /* 绿证详情样式 */
   .table-content {
+    width: 100%;
+    box-sizing: border-box;
+
     .certificate-list {
+      width: 100%;
+      box-sizing: border-box;
+
       .certificate-card {
         background: #fff;
         border-radius: 16rpx;
         padding: 30rpx;
         margin-bottom: 20rpx;
         box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+        width: 100%;
+        box-sizing: border-box;
 
         .cert-header {
           display: flex;
@@ -291,6 +320,9 @@
 
   /* 趋势图样式 */
   .trend-content {
+    width: 100%;
+    box-sizing: border-box;
+
     .trend-chart {
       background: #fff;
       border-radius: 16rpx;
@@ -300,6 +332,8 @@
       display: flex;
       gap: 20rpx;
       overflow-x: auto;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .trend-item {
@@ -389,11 +423,16 @@
 
   /* 能源类型样式 */
   .types-content {
+    width: 100%;
+    box-sizing: border-box;
+
     .energy-types {
       background: #fff;
       border-radius: 16rpx;
       padding: 30rpx;
       box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .energy-item {

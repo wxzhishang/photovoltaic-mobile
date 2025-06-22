@@ -1,0 +1,368 @@
+.expert-detail-page {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  
+  .loading-container,
+  .error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #999;
+    font-size: 28rpx;
+  }
+
+  .expert-header {
+    background-color: white;
+    padding: 60rpx 40rpx;
+    display: flex;
+    border-bottom: 1rpx solid #f0f0f0;
+
+    .expert-avatar-container {
+      position: relative;
+      margin-right: 40rpx;
+
+      .expert-avatar {
+        width: 160rpx;
+        height: 160rpx;
+        border-radius: 50%;
+        background-color: #f5f5f5;
+      }
+
+      .status-indicator {
+        position: absolute;
+        bottom: 4rpx;
+        right: 4rpx;
+        width: 32rpx;
+        height: 32rpx;
+        border-radius: 50%;
+        border: 6rpx solid white;
+      }
+    }
+
+    .expert-info {
+      flex: 1;
+
+      .expert-name-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16rpx;
+
+        .expert-name {
+          font-size: 40rpx;
+          font-weight: bold;
+          color: #333;
+        }
+
+        .expert-status {
+          font-size: 28rpx;
+          font-weight: 500;
+        }
+      }
+
+      .expert-title {
+        font-size: 32rpx;
+        color: #1890ff;
+        margin-bottom: 12rpx;
+        display: block;
+      }
+
+      .expert-organization {
+        font-size: 28rpx;
+        color: #999;
+        margin-bottom: 40rpx;
+        display: block;
+      }
+
+      .expert-stats {
+        display: flex;
+        justify-content: space-between;
+
+        .stat-item {
+          text-align: center;
+
+          .stat-value {
+            font-size: 34rpx;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8rpx;
+          }
+
+          .stat-label {
+            font-size: 24rpx;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  .expert-tags-section {
+    background-color: white;
+    padding: 40rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+
+    .expert-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tag {
+        background-color: #f0f8ff;
+        color: #1890ff;
+        font-size: 24rpx;
+        padding: 12rpx 24rpx;
+        border-radius: 30rpx;
+        margin-right: 16rpx;
+        margin-bottom: 16rpx;
+      }
+    }
+  }
+
+  .tabs-container {
+    background-color: white;
+    border-bottom: 1rpx solid #f0f0f0;
+
+    .tabs-scroll {
+      white-space: nowrap;
+    }
+
+    .tabs-list {
+      display: flex;
+      padding: 0 40rpx;
+
+      .tab-item {
+        padding: 30rpx 40rpx;
+        margin-right: 20rpx;
+        border-bottom: 4rpx solid transparent;
+        font-size: 30rpx;
+        transition: all 0.3s;
+        white-space: nowrap;
+
+        &.active {
+          color: #1890ff;
+          border-bottom-color: #1890ff;
+        }
+
+        &:not(.active) {
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .content-scroll {
+    height: calc(100vh - 600rpx);
+  }
+
+  .content-container {
+    padding: 40rpx;
+
+    .section {
+      background-color: white;
+      border-radius: 24rpx;
+      padding: 40rpx;
+      margin-bottom: 30rpx;
+
+      .section-title {
+        font-size: 32rpx;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30rpx;
+        display: block;
+      }
+
+      .section-text {
+        font-size: 28rpx;
+        color: #666;
+        line-height: 1.6;
+        display: block;
+      }
+
+      .specialty-list,
+      .certification-list,
+      .achievement-list {
+        .specialty-item,
+        .certification-item,
+        .achievement-item {
+          margin-bottom: 16rpx;
+          
+          Text {
+            font-size: 28rpx;
+            color: #666;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      .work-history {
+        .work-item {
+          border-left: 3px solid #1890ff;
+          padding-left: 15px;
+          margin-bottom: 20px;
+
+          .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+
+            .work-company {
+              font-size: 16px;
+              font-weight: bold;
+              color: #333;
+            }
+
+            .work-duration {
+              font-size: 12px;
+              color: #999;
+            }
+          }
+
+          .work-position {
+            font-size: 14px;
+            color: #1890ff;
+            margin-bottom: 6px;
+            display: block;
+          }
+
+          .work-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            display: block;
+          }
+        }
+      }
+
+      .portfolio-list {
+        .portfolio-item {
+          background-color: #f8f9fa;
+          border-radius: 8px;
+          padding: 15px;
+          margin-bottom: 12px;
+
+          .portfolio-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+          }
+
+          .portfolio-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            display: block;
+          }
+        }
+      }
+
+      .service-areas {
+        .service-area {
+          margin-bottom: 8px;
+          
+          Text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      .consultation-info {
+        .info-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 0;
+          border-bottom: 1px solid #f0f0f0;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .info-label {
+            font-size: 14px;
+            color: #666;
+          }
+
+          .info-value {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .contact-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+
+        .action-btn {
+          flex: 1;
+          padding: 12px;
+          border-radius: 8px;
+          text-align: center;
+          font-size: 14px;
+          transition: all 0.3s;
+
+          &.primary {
+            background-color: #1890ff;
+            color: white;
+          }
+
+          &.secondary {
+            background-color: #f5f5f5;
+            color: #333;
+          }
+
+          &:active {
+            transform: scale(0.98);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 30rpx 40rpx;
+    border-top: 1rpx solid #f0f0f0;
+    display: flex;
+    gap: 24rpx;
+    z-index: 100;
+
+    .action-btn {
+      padding: 24rpx 40rpx;
+      border-radius: 16rpx;
+      text-align: center;
+      font-size: 30rpx;
+      transition: all 0.3s;
+
+      &.outline {
+        flex: 0 0 160rpx;
+        border: 1rpx solid #d9d9d9;
+        color: #666;
+        background-color: white;
+      }
+
+      &.primary {
+        flex: 1;
+        background-color: #1890ff;
+        color: white;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+} 

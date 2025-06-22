@@ -209,62 +209,62 @@ const Home = () => {
       const mockExperts: ExpertItem[] = [
         {
           id: '1',
-          name: '张明华',
-          title: '光伏技术专家',
+          name: '张建华',
+          title: '光伏系统设计专家',
           avatar: Avatar1,
-          company: '清华大学',
-          expertise: ['太阳能电池技术', '光伏材料研究'],
+          company: '中国光伏行业协会',
+          expertise: ['光伏系统设计', '电站规划'],
           experience: '20年',
           projects: 50
         },
         {
           id: '2',
-          name: '李建国',
-          title: '光伏项目总监',
+          name: '李明',
+          title: '新能源政策专家',
           avatar: Avatar2,
-          company: '阳光电源',
-          expertise: ['大型光伏电站建设', '项目管理'],
+          company: '国家发改委能源研究所',
+          expertise: ['政策解读', '补贴申报'],
           experience: '15年',
           projects: 35
         },
         {
           id: '3',
-          name: '王晓敏',
-          title: '储能技术专家',
-          avatar: 'https://cl.tyut.edu.cn/__local/C/A6/4E/79980161DCF16ADE233C975D5BF_F7083067_13B69.png',
-          company: '宁德时代',
-          expertise: ['储能系统设计', '电池技术'],
+          name: '王晓梅',
+          title: '光伏投资分析师',
+          avatar: Avatar1,
+          company: '华能新能源投资有限公司',
+          expertise: ['投资分析', '项目评估'],
           experience: '12年',
           projects: 28
         },
         {
           id: '4',
           name: '陈志强',
-          title: '光伏投资顾问',
-          avatar: 'https://history.nankai.edu.cn/_upload/article/images/40/69/2287598b4493b6794b7152e27388/ce001c6a-7623-4377-bd9d-f09e1ff52300.jpg',
-          company: '正泰新能源',
-          expertise: ['投资分析', '市场研究'],
+          title: '分布式光伏专家',
+          avatar: Avatar2,
+          company: '隆基绿能科技股份有限公司',
+          expertise: ['分布式光伏', '屋顶开发'],
           experience: '18年',
           projects: 42
         },
         {
           id: '5',
-          name: '刘海波',
-          title: '光伏制造专家',
-          avatar: 'https://faculty.ecnu.edu.cn/_upload/article/images/f9/0d/a490bfaa4200917bb035528c01ef/20030007_s.jpg',
-          company: '隆基绿能',
-          expertise: ['制造工艺', '质量管理'],
-          experience: '16年',
+          name: '刘芳',
+          title: '光伏运维专家',
+          avatar: Avatar1,
+          company: '天合光能股份有限公司',
+          expertise: ['运维管理', '故障诊断'],
+          experience: '14年',
           projects: 38
         },
         {
           id: '6',
-          name: '赵文静',
-          title: '政策研究专家',
-          avatar: 'https://www.sustech.edu.cn/uploads/medium/2024/06/13160634_59621.jpg',
-          company: '国家发改委',
-          expertise: ['政策分析', '法规解读'],
-          experience: '14年',
+          name: '赵国庆',
+          title: '储能技术专家',
+          avatar: Avatar2,
+          company: '宁德时代新能源科技有限公司',
+          expertise: ['储能技术', '光储一体化'],
+          experience: '10年',
           projects: 25
         }
       ]
@@ -278,16 +278,21 @@ const Home = () => {
 
   const handleGridClick = (item: any, index: number) => {
     const routes = [
-      '/pages/greenElectricity/index',
-      '/pages/news/index',
-      '/pages/innovation/index',
-      '/pages/experts/index',
-      '/pages/courses/index',
-      '/pages/jobs/index'
+      { url: '/pages/trading/index', isTabBar: false },
+      { url: '/pages/news/index', isTabBar: false },
+      { url: '/pages/innovation/index', isTabBar: false },
+      { url: '/pages/experts/index', isTabBar: false },
+      { url: '/pages/courses/index', isTabBar: true },  // 课程中心是tabBar页面
+      { url: '/pages/jobs/index', isTabBar: true }      // 岗位信息是tabBar页面
     ]
     
     if (routes[index]) {
-      Taro.navigateTo({ url: routes[index] })
+      const route = routes[index]
+      if (route.isTabBar) {
+        Taro.switchTab({ url: route.url })
+      } else {
+        Taro.navigateTo({ url: route.url })
+      }
     }
   }
 
@@ -299,6 +304,12 @@ const Home = () => {
 
   const handleMoreNews = () => {
     Taro.navigateTo({ url: '/pages/news/index' })
+  }
+
+  const handleExpertClick = (expert: ExpertItem) => {
+    Taro.navigateTo({ 
+      url: `/pages/expertDetail/index?id=${expert.id}` 
+    })
   }
 
   return (
@@ -399,6 +410,7 @@ const Home = () => {
               <View
                 key={expert.id}
                 className='expert-card-horizontal'
+                onClick={() => handleExpertClick(expert)}
               >
                 <Image 
                   src={expert.avatar} 

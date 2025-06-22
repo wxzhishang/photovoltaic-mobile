@@ -1,17 +1,19 @@
 export default defineAppConfig({
   pages: [
     'pages/home/index',
-    'pages/login/index',
-    'pages/register/index',
+    // 'pages/login/index',
+    // 'pages/register/index',
     'pages/trading/index',
+    'pages/tradingDetail/index',
     'pages/news/index',
     'pages/newsDetail/index',
     'pages/experts/index',
+    'pages/expertDetail/index',
     'pages/courses/index',
     'pages/courseDetail/index',
     'pages/jobs/index',
     'pages/jobDetail/index',
-    'pages/personal/index',
+    // 'pages/personal/index',
     'pages/authentication/index',
     'pages/greenElectricity/index',
     'pages/innovation/index',
@@ -53,12 +55,12 @@ export default defineAppConfig({
         selectedIconPath: 'assets/images/icon4_active.jpg',
         text: '绿电绿证'
       },
-      {
-        pagePath: 'pages/personal/index',
-        iconPath: 'assets/images/icon5.jpg',
-        selectedIconPath: 'assets/images/icon5_active.jpg',
-        text: '我的'
-      }
+      // {
+      //   pagePath: 'pages/personal/index',
+      //   iconPath: 'assets/images/icon5.jpg',
+      //   selectedIconPath: 'assets/images/icon5_active.jpg',
+      //   text: '我的'
+      // }
     ]
   },
   permission: {

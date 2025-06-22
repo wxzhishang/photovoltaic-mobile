@@ -1,0 +1,208 @@
+.trading-detail-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+
+  .detail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .card-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .label {
+        color: #666;
+        font-size: 28px;
+      }
+
+      .value {
+        color: #333;
+        font-size: 28px;
+        font-weight: 500;
+
+        &.price {
+          color: #ff6b35;
+          font-size: 32px;
+          font-weight: 600;
+        }
+
+                  &.status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 24px;
+
+          &.active {
+            background: #e8f5e8;
+            color: #3cc51f;
+          }
+
+          &.completed {
+            background: #f0f0f0;
+            color: #999;
+          }
+
+          &.cancelled {
+            background: #ffebeb;
+            color: #ff4757;
+          }
+        }
+      }
+    }
+  }
+
+  .header-card {
+    .trading-title {
+      font-size: 36px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .trading-type {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 26px;
+      font-weight: 500;
+
+      &.buy {
+        background: #e8f4fd;
+        color: #1890ff;
+      }
+
+      &.sell {
+        background: #fff2e8;
+        color: #fa8c16;
+      }
+    }
+  }
+
+  .contact-section {
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 18px;
+      }
+
+      .contact-info {
+        flex: 1;
+
+        .contact-name {
+          font-size: 30px;
+          font-weight: 500;
+          color: #333;
+          margin-bottom: 4px;
+        }
+
+        .contact-role {
+          font-size: 24px;
+          color: #999;
+        }
+      }
+
+      .contact-button {
+        padding: 8px 16px;
+        background: #1890ff;
+        color: white;
+        border-radius: 20px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .action-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+
+    .action-button {
+      flex: 1;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 500;
+
+      &.primary {
+        background: #1890ff;
+        color: white;
+      }
+
+      &.secondary {
+        background: #f0f0f0;
+        color: #333;
+      }
+    }
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #999;
+    font-size: 28px;
+  }
+
+  .error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #999;
+
+    .error-message {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .retry-button {
+      padding: 10px 20px;
+      background: #1890ff;
+      color: white;
+      border-radius: 6px;
+      font-size: 28px;
+    }
+  }
+} 

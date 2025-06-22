@@ -1,1 +1,3 @@
-export default definePageConfig({ navigationBarTitleText: 'newsDetail' })
+export default definePageConfig({
+  navigationBarTitleText: '新闻详情'
+})

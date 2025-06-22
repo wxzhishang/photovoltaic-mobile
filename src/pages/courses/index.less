@@ -1,24 +1,29 @@
-.page { padding: 40px; text-align: center; }
-
 .courses-page {
   min-height: 100vh;
   background: #f5f5f5;
   padding-bottom: 120rpx;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 
   .search-section {
     background: #fff;
     padding: 20rpx 30rpx;
     border-bottom: 1rpx solid #eee;
+    box-sizing: border-box;
   }
 
   .tabs-section {
     background: #fff;
     padding: 20rpx 30rpx;
     border-bottom: 1rpx solid #eee;
+    box-sizing: border-box;
 
     .tab-buttons {
       display: flex;
       gap: 15rpx;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .tab-button {
@@ -29,6 +34,8 @@
       border: 1rpx solid #ddd;
       background: #fff;
       transition: all 0.3s ease;
+      box-sizing: border-box;
+      min-width: 0;
 
       &.active {
         background: #1890ff;
@@ -42,6 +49,9 @@
       .tab-text {
         font-size: 24rpx;
         color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -53,16 +63,21 @@
     padding: 20rpx;
     border-radius: 12rpx;
     text-align: center;
+    box-sizing: border-box;
+    width: calc(100% - 60rpx);
 
     .notice-text {
       font-size: 24rpx;
       color: #856404;
+      word-wrap: break-word;
     }
   }
 
   .courses-list {
     height: calc(100vh - 300rpx);
     padding: 0 30rpx;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .course-card {
@@ -72,20 +87,27 @@
     box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
+    width: 100%;
 
     .course-thumbnail {
       width: 100%;
       height: 200rpx;
+      object-fit: cover;
     }
 
     .course-content {
       padding: 30rpx;
+      box-sizing: border-box;
+      width: 100%;
 
       .course-header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 20rpx;
+        width: 100%;
+        box-sizing: border-box;
 
         .course-title {
           font-size: 30rpx;
@@ -98,12 +120,17 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
           overflow: hidden;
+          word-wrap: break-word;
+          min-width: 0;
         }
 
         .course-status {
+          flex-shrink: 0;
+          
           .status-text {
             font-size: 22rpx;
             font-weight: bold;
+            white-space: nowrap;
           }
         }
       }
@@ -117,7 +144,9 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
-        display: block;
+        word-wrap: break-word;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .course-meta {
@@ -125,6 +154,8 @@
         gap: 20rpx;
         margin-bottom: 20rpx;
         flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
 
         .instructor,
         .duration,
@@ -134,6 +165,9 @@
           background: #f8f9fa;
           padding: 6rpx 12rpx;
           border-radius: 12rpx;
+          box-sizing: border-box;
+          white-space: nowrap;
+          flex-shrink: 0;
         }
 
         .instructor {
@@ -147,6 +181,8 @@
         gap: 15rpx;
         flex-wrap: wrap;
         margin-bottom: 20rpx;
+        width: 100%;
+        box-sizing: border-box;
 
         .tag {
           background: #e3f2fd;
@@ -155,6 +191,9 @@
           padding: 8rpx 16rpx;
           border-radius: 16rpx;
           line-height: 1;
+          box-sizing: border-box;
+          white-space: nowrap;
+          flex-shrink: 0;
         }
       }
 
@@ -162,11 +201,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+        box-sizing: border-box;
 
         .price-section {
           display: flex;
           align-items: baseline;
           gap: 15rpx;
+          flex-shrink: 0;
 
           .current-price {
             font-size: 32rpx;
@@ -186,11 +228,13 @@
           flex-direction: column;
           align-items: flex-end;
           gap: 5rpx;
+          flex-shrink: 0;
 
           .student-count,
           .rating {
             font-size: 22rpx;
             color: #666;
+            white-space: nowrap;
           }
 
           .rating {
@@ -211,29 +255,41 @@
     padding: 40rpx;
     color: #3cc51f;
     font-size: 28rpx;
+    width: 100%;
+    box-sizing: border-box;
 
     &:active {
       opacity: 0.7;
+    }
+    
+    .load-more-text {
+      word-wrap: break-word;
     }
   }
 
   .no-more {
     text-align: center;
     padding: 40rpx;
+    width: 100%;
+    box-sizing: border-box;
     
     .no-more-text {
       color: #999;
       font-size: 26rpx;
+      word-wrap: break-word;
     }
   }
 
   .empty-state {
     text-align: center;
     padding: 100rpx 40rpx;
+    width: 100%;
+    box-sizing: border-box;
     
     .empty-text {
       color: #999;
       font-size: 28rpx;
+      word-wrap: break-word;
     }
   }
 }

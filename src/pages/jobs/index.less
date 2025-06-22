@@ -1,14 +1,16 @@
-.page { padding: 40px; text-align: center; }
-
 .jobs-page {
   min-height: 100vh;
   background: #f5f5f5;
   padding-bottom: 120rpx;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 
   .search-section {
     background: #fff;
     padding: 20rpx 30rpx;
     border-bottom: 1rpx solid #eee;
+    box-sizing: border-box;
   }
 
   .tabs-section {
@@ -16,10 +18,13 @@
     padding: 20rpx 30rpx;
     border-bottom: 1rpx solid #eee;
     margin-bottom: 20rpx;
+    box-sizing: border-box;
 
     .tab-buttons {
       display: flex;
       gap: 20rpx;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .tab-button {
@@ -30,6 +35,8 @@
       border: 1rpx solid #ddd;
       background: #fff;
       transition: all 0.3s ease;
+      box-sizing: border-box;
+      min-width: 0;
 
       &.active {
         background: #1890ff;
@@ -43,6 +50,9 @@
       .tab-text {
         font-size: 26rpx;
         color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -50,6 +60,8 @@
   .jobs-list {
     height: calc(100vh - 220rpx);
     padding: 0 30rpx;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .job-card {
@@ -59,28 +71,37 @@
     margin-bottom: 20rpx;
     box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
     position: relative;
+    box-sizing: border-box;
+    width: 100%;
 
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20rpx;
+      width: 100%;
+      box-sizing: border-box;
 
       .company-info {
         display: flex;
         align-items: center;
         gap: 20rpx;
         flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
 
         .company-logo {
           width: 80rpx;
           height: 80rpx;
           border-radius: 12rpx;
           flex-shrink: 0;
+          object-fit: cover;
         }
 
         .company-details {
           flex: 1;
+          min-width: 0;
+          box-sizing: border-box;
 
           .company-name {
             font-size: 26rpx;
@@ -88,21 +109,33 @@
             color: #333;
             margin-bottom: 8rpx;
             display: block;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
 
           .job-location {
             font-size: 22rpx;
             color: #666;
             display: block;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
       }
 
       .job-status {
+        flex-shrink: 0;
+        
         .status-tag {
           padding: 8rpx 16rpx;
           border-radius: 12rpx;
           font-size: 20rpx;
+          box-sizing: border-box;
+          white-space: nowrap;
 
           &.published {
             background: #e8f5e8;
@@ -123,6 +156,8 @@
 
     .job-content {
       margin-bottom: 20rpx;
+      width: 100%;
+      box-sizing: border-box;
 
       .job-title {
         font-size: 32rpx;
@@ -131,6 +166,9 @@
         margin-bottom: 20rpx;
         line-height: 1.4;
         display: block;
+        word-wrap: break-word;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .job-meta {
@@ -138,11 +176,15 @@
         gap: 20rpx;
         margin-bottom: 15rpx;
         flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
 
         .job-salary {
           color: #ff6b35;
           font-size: 28rpx;
           font-weight: bold;
+          flex-shrink: 0;
+          white-space: nowrap;
         }
 
         .job-experience,
@@ -152,6 +194,9 @@
           background: #f8f9fa;
           padding: 6rpx 12rpx;
           border-radius: 12rpx;
+          box-sizing: border-box;
+          white-space: nowrap;
+          flex-shrink: 0;
         }
       }
 
@@ -160,6 +205,9 @@
         color: #666;
         margin-bottom: 15rpx;
         display: block;
+        word-wrap: break-word;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .job-description {
@@ -170,7 +218,9 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
-        display: block;
+        word-wrap: break-word;
+        width: 100%;
+        box-sizing: border-box;
       }
     }
 
@@ -178,21 +228,28 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
+      box-sizing: border-box;
 
       .job-type-tag {
         background: #f0f8f0;
         color: #3cc51f;
         padding: 8rpx 16rpx;
         border-radius: 16rpx;
+        box-sizing: border-box;
+        flex-shrink: 0;
 
         .type-text {
           font-size: 22rpx;
+          white-space: nowrap;
         }
       }
 
       .publish-time {
         font-size: 22rpx;
         color: #999;
+        flex-shrink: 0;
+        white-space: nowrap;
       }
     }
 
@@ -207,29 +264,41 @@
     padding: 40rpx;
     color: #3cc51f;
     font-size: 28rpx;
+    width: 100%;
+    box-sizing: border-box;
 
     &:active {
       opacity: 0.7;
+    }
+    
+    .load-more-text {
+      word-wrap: break-word;
     }
   }
 
   .no-more {
     text-align: center;
     padding: 40rpx;
+    width: 100%;
+    box-sizing: border-box;
     
     .no-more-text {
       color: #999;
       font-size: 26rpx;
+      word-wrap: break-word;
     }
   }
 
   .empty-state {
     text-align: center;
     padding: 100rpx 40rpx;
+    width: 100%;
+    box-sizing: border-box;
     
     .empty-text {
       color: #999;
       font-size: 28rpx;
+      word-wrap: break-word;
     }
   }
 }

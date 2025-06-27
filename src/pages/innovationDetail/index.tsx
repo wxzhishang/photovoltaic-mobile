@@ -62,7 +62,7 @@ const InnovationDetail = () => {
 实施要求
 
 各地要结合实际情况，制定具体实施方案，确保政策措施落地见效。同时要加强监管，防范风险，促进光伏产业健康发展。`,
-          thumbnail: '/assets/images/innovation1.jpg',
+          thumbnail: 'https://www.75xn.com/zb_users/upload/editor/water/2023-03-15/6411ce42cb9d6.jpeg',
           publishTime: '2024-01-15',
           viewCount: 1250,
           source: '国家发改委',
@@ -92,8 +92,8 @@ const InnovationDetail = () => {
 运维管理要求
 
 分布式光伏项目应建立完善的运维管理体系，确保设备安全稳定运行，定期开展设备检查和维护工作。`,
-          thumbnail: '/assets/images/innovation2.jpg',
-          publishTime: '2024-01-12',
+thumbnail: 'https://www.75xn.com/zb_users/upload/editor/water/2023-03-15/6411ce42cb9d6.jpeg',
+publishTime: '2024-01-12',
           viewCount: 980,
           source: '国家能源局',
           tags: ['分布式', '并网管理', '项目管理'],
@@ -124,8 +124,8 @@ const InnovationDetail = () => {
 用地标准要求
 
 光伏发电项目用地应集约节约，提高土地利用效率，严格控制用地规模，优先利用未利用地和废弃土地。`,
-          thumbnail: '/assets/images/innovation3.jpg',
-          publishTime: '2024-01-10',
+thumbnail: 'https://www.75xn.com/zb_users/upload/editor/water/2023-03-15/6411ce42cb9d6.jpeg',
+publishTime: '2024-01-10',
           viewCount: 756,
           source: '自然资源部',
           tags: ['用地政策', '项目建设', '合规管理'],
@@ -159,8 +159,8 @@ const InnovationDetail = () => {
 预期发展目标
 
 到2030年，我国光伏发电装机容量将达到12亿千瓦以上，为实现碳达峰目标提供重要支撑。`,
-          thumbnail: '/assets/images/innovation4.jpg',
-          publishTime: '2024-01-08',
+thumbnail: 'https://www.75xn.com/zb_users/upload/editor/water/2023-03-15/6411ce42cb9d6.jpeg',
+publishTime: '2024-01-08',
           viewCount: 1123,
           source: '生态环境部',
           tags: ['碳达峰', '碳中和', '发展机遇'],
@@ -194,8 +194,8 @@ const InnovationDetail = () => {
 预期发展成效
 
 到2025年，我国光伏制造业技术水平和产业竞争力将进一步提升，产业规模持续扩大，国际市场份额稳步增长。`,
-          thumbnail: '/assets/images/innovation5.jpg',
-          publishTime: '2024-01-05',
+thumbnail: 'https://www.75xn.com/zb_users/upload/editor/water/2023-03-15/6411ce42cb9d6.jpeg',
+publishTime: '2024-01-05',
           viewCount: 892,
           source: '工信部',
           tags: ['制造业', '技术创新', '产业升级'],

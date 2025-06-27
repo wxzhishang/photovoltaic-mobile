@@ -39,7 +39,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>市场影响</h3>
       <p>业内专家认为，这一技术突破将显著提升我国在全球光伏产业中的竞争优势，进一步巩固我国在光伏制造领域的领先地位。</p>
     `,
-    thumbnail: '/assets/images/logo1.jpg',
+    thumbnail: 'https://img-s.msn.cn/tenant/amp/entityid/AA1HjU72.img?w=768&h=430&m=6',
+
     publishTime: '2024-01-15 10:30:00',
     viewCount: 1256,
     author: '科技日报',
@@ -67,7 +68,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>发展前景</h3>
       <p>预计2024年全年绿色电力交易量将突破600亿千瓦时，绿色电力市场将迎来更大发展机遇。</p>
     `,
-    thumbnail: '/assets/images/logo2.jpg',
+    thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP-C.qh5aC7TKjLBSzdao4TFZvQHaNW?r=0&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3',
     publishTime: '2024-01-14 14:20:00',
     viewCount: 987,
     author: '能源新闻网',
@@ -100,7 +101,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>实施效果预期</h3>
       <p>政策实施后，预计将推动分布式光伏年新增装机容量达到70GW以上，为实现碳达峰碳中和目标提供有力支撑。</p>
     `,
-    thumbnail: '/assets/images/logo3.jpg',
+    thumbnail: 'http://pmoe549a9.pic1.ysjianzhan.cn/upload/u4202821969320885464fm253fmtautoapp120fJPEG_webp.jpg',
+
     publishTime: '2024-01-13 09:15:00',
     viewCount: 2134,
     author: '光伏资讯',
@@ -135,7 +137,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>发展前景</h3>
       <p>预计到2030年，光储一体化项目将成为新能源发展的主流模式，市场规模将超过1000亿元。</p>
     `,
-    thumbnail: '/assets/images/logo4.jpg',
+    thumbnail: 'https://ts1.tc.mm.bing.net/th/id/R-C.b03595e156485a93f398b99e45b6e401?rik=4XAWTMKCOpq1Rg&riu=http%3a%2f%2fi9.hexun.com%2f2021-12-29%2f205023516.jpg&ehk=FvZsPKc9T1pBAlx220elVxhnZAZKAaw20U8ndp1x54o%3d&risl=&pid=ImgRaw&r=0',
     publishTime: '2024-01-12 16:45:00',
     viewCount: 1567,
     author: '储能观察',
@@ -168,7 +170,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>未来发展方向</h3>
       <p>下一步将重点推进源网荷储一体化发展，构建新型电力系统，为碳达峰碳中和目标实现提供有力支撑。</p>
     `,
-    thumbnail: '/assets/images/logo5.jpg',
+    thumbnail: 'https://img3.jiemian.com/101/original/20210721/162686425355507300_a700x398.jpg',
+
     publishTime: '2024-01-11 11:30:00',
     viewCount: 890,
     author: '电网周刊',
@@ -202,7 +205,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>未来发展趋势</h3>
       <p>预计未来5年，光伏产业链将更加成熟稳定，为全球能源转型提供坚实的产业支撑。</p>
     `,
-    thumbnail: '/assets/images/logo6.jpg',
+    thumbnail: 'https://x0.ifengimg.com/res/2023/364FA32E52F1D91B38BA527629AFAE2703391823_size985_w1080_h608.png',
+
     publishTime: '2024-01-10 08:00:00',
     viewCount: 1890,
     author: '产业观察',
@@ -236,7 +240,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>市场前景</h3>
       <p>预计到2025年，光伏充电站市场规模将达到500亿元，成为新能源产业发展的重要增长点。</p>
     `,
-    thumbnail: '/assets/images/logo1.jpg',
+    thumbnail: 'https://img3.jiemian.com/101/original/20230208/167582241699903900_a700x398.jpg',
+
     publishTime: '2024-01-09 13:25:00',
     viewCount: 1456,
     author: '新能源周报',
@@ -269,7 +274,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>政策保障</h3>
       <p>国家将从政策、资金、技术等多个方面为光伏产业发展提供全方位支持，确保碳中和目标如期实现。</p>
     `,
-    thumbnail: '/assets/images/logo2.jpg',
+    thumbnail: 'https://ts1.tc.mm.bing.net/th/id/R-C.64a236e238299e14f648987d1655c47b?rik=kkkMjVKe%2biMmUQ&riu=http%3a%2f%2fstatics.nengyuanjie.net%2f2022%2f0407%2f20220407113641676.jpg&ehk=2nNDL0TH4R5%2be1qel0iRALrptTt5XtECGFK78zb2Uzw%3d&risl=&pid=ImgRaw&r=0',
     publishTime: '2024-01-08 15:40:00',
     viewCount: 2345,
     author: '碳中和研究院',
@@ -303,7 +308,8 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>未来展望</h3>
       <p>预计未来5年，光伏发电成本仍有15-20%的下降空间，将进一步增强市场竞争优势。</p>
     `,
-    thumbnail: '/assets/images/logo3.jpg',
+    thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP-C.ZNcyQzdbkWeqDtLoXnysLgHaEK?r=0&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3',
+
     publishTime: '2024-01-07 10:15:00',
     viewCount: 1678,
     author: '成本分析师',
@@ -337,7 +343,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>社会效益</h3>
       <p>农光互补项目为乡村振兴提供了有力支撑，预计可为农民年增收200-300元/亩，成为农村经济发展的新动能。</p>
     `,
-    thumbnail: '/assets/images/logo4.jpg',
+    thumbnail: 'https://ts1.tc.mm.bing.net/th/id/R-C.7302cbfdce1eae0d9f25c7449d9cd3ae?rik=mNbsczbO4G2K3w&riu=http%3a%2f%2fimg1.ally.net.cn%2f2017%2f0928%2f20170928015849322.jpg&ehk=dBFDmSHNnyljC4wTEn%2bjE8HNoZD34DucmJW%2fdFAzoec%3d&risl=&pid=ImgRaw&r=0',
     publishTime: '2024-01-06 14:30:00',
     viewCount: 1234,
     author: '乡村振兴网',
@@ -371,7 +377,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>发展前景</h3>
       <p>随着技术不断成熟和成本持续下降，海上光伏有望成为光伏产业发展的新增长点，预计市场规模将达到千亿级别。</p>
     `,
-    thumbnail: '/assets/images/logo5.jpg',
+    thumbnail: 'https://n.sinaimg.cn/translate/20170927/__ZR-fymfcih6969990.jpg',
     publishTime: '2024-01-05 09:45:00',
     viewCount: 987,
     author: '海洋能源',
@@ -405,7 +411,7 @@ const mockNewsDetail: { [key: string]: NewsDetail } = {
       <h3>发展趋势</h3>
       <p>未来智能运维系统将更加智能化，通过5G、边缘计算等技术，实现更精准的预测和更高效的运维管理。</p>
     `,
-    thumbnail: '/assets/images/logo6.jpg',
+    thumbnail: 'https://ts1.tc.mm.bing.net/th/id/R-C.c9f5cfe04d5120e3b0e988cb5b816441?rik=HCOYn0%2bTzBnaDw&riu=http%3a%2f%2fimg.cnwest.com%2fa%2f10001%2f202305%2f05%2f82b92a415db82324a33aa7ad8c5c8334.jpg&ehk=y7QSdVTjALvFQmaT8DESfH29ZeEwOTDQDcoKE9cIQx4%3d&risl=&pid=ImgRaw&r=0',
     publishTime: '2024-01-04 16:20:00',
     viewCount: 1567,
     author: '智能运维',

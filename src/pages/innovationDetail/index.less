@@ -97,19 +97,23 @@
     }
   }
 
-  .image-section {
-    background: #fff;
-    padding: 30rpx;
-    margin-bottom: 20rpx;
-    text-align: center;
-
-    .detail-image {
-      width: 100%;
-      max-height: 400rpx;
-      border-radius: 12rpx;
+    .image-section {
+      background: #fff;
+      padding: 30rpx;
+      margin-bottom: 20rpx;
+      .detail-image {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        max-height: 400rpx;
+        border-radius: 12rpx;
+      }
     }
+  .detail-image img{
+    left: 50%;
+      transform: translate(-50%, -50%);
   }
-
   .content-section {
     background: #fff;
     padding: 30rpx;

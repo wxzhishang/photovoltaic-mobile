@@ -4,6 +4,8 @@ import { Search } from '@taroify/core'
 import '@taroify/core/search/style'
 import Taro from '@tarojs/taro'
 import './index.less'
+import Avatar1 from '../../assets/images/avatar1.jpg'
+import Avatar2 from '../../assets/images/avatar2.jpg'
 
 interface ExpertItem {
   id: string
@@ -46,7 +48,7 @@ const Experts = () => {
           name: '张建华',
           title: '光伏系统设计专家',
           description: '20年光伏行业经验，专注于大型光伏电站设计与优化，参与过多个GW级项目建设',
-          avatar: '/assets/images/avatar1.jpg',
+          avatar: Avatar1,
           specialty: ['光伏系统设计', '电站规划', '技术咨询'],
           experience: '20年',
           organization: '中国光伏行业协会',
@@ -60,7 +62,7 @@ const Experts = () => {
           name: '李明',
           title: '新能源政策专家',
           description: '长期从事新能源政策研究，对国家及地方光伏政策有深入理解，为企业提供政策解读服务',
-          avatar: '/assets/images/avatar2.jpg',
+          avatar: Avatar2,
           specialty: ['政策解读', '补贴申报', '项目备案'],
           experience: '15年',
           organization: '国家发改委能源研究所',
@@ -74,7 +76,7 @@ const Experts = () => {
           name: '王晓梅',
           title: '光伏投资分析师',
           description: '资深投资分析师，专注于光伏项目投资评估与风险分析，服务过百余个投资项目',
-          avatar: '/assets/images/avatar1.jpg',
+          avatar: 'https://cl.tyut.edu.cn/__local/C/A6/4E/79980161DCF16ADE233C975D5BF_F7083067_13B69.png',
           specialty: ['投资分析', '项目评估', '财务建模'],
           experience: '12年',
           organization: '华能新能源投资有限公司',
@@ -88,7 +90,7 @@ const Experts = () => {
           name: '陈志强',
           title: '分布式光伏专家',
           description: '分布式光伏领域资深专家，在工商业分布式、户用光伏等领域有丰富实践经验',
-          avatar: '/assets/images/avatar2.jpg',
+          avatar: 'https://history.nankai.edu.cn/_upload/article/images/40/69/2287598b4493b6794b7152e27388/ce001c6a-7623-4377-bd9d-f09e1ff52300.jpg',
           specialty: ['分布式光伏', '屋顶开发', '并网技术'],
           experience: '18年',
           organization: '隆基绿能科技股份有限公司',
@@ -102,7 +104,7 @@ const Experts = () => {
           name: '刘芳',
           title: '光伏运维专家',
           description: '光伏电站运维管理专家，在电站运维、故障诊断、性能优化等方面具有丰富经验',
-          avatar: '/assets/images/avatar1.jpg',
+          avatar: 'https://www.sustech.edu.cn/uploads/medium/2024/06/13160634_59621.jpg',
           specialty: ['运维管理', '故障诊断', '性能优化'],
           experience: '14年',
           organization: '天合光能股份有限公司',
@@ -116,7 +118,7 @@ const Experts = () => {
           name: '赵国庆',
           title: '储能技术专家',
           description: '储能技术领域专家，专注于光储一体化系统设计，在储能技术应用方面有深度研究',
-          avatar: '/assets/images/avatar2.jpg',
+          avatar: 'https://faculty.ecnu.edu.cn/_upload/article/images/f9/0d/a490bfaa4200917bb035528c01ef/20030007_s.jpg',
           specialty: ['储能技术', '光储一体化', '系统集成'],
           experience: '10年',
           organization: '宁德时代新能源科技有限公司',
@@ -257,7 +259,7 @@ const Experts = () => {
             >
               <View className='expert-avatar-container'>
                 <Image 
-                  src={expert.avatar || '/assets/images/default-avatar.jpg'} 
+                  src={expert.avatar} 
                   className='expert-avatar'
                   mode='aspectFill'
                 />
